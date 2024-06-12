@@ -224,6 +224,7 @@ main p {
         padding: 8px;
         padding: 9px;
         padding: 4px;
+        padding: auto;
     }
 }
 
