@@ -228,6 +228,7 @@ main p {
         padding: 3px;
         margin: 56px;
         margin: auto;
+        margin-top: auto;
     }
 }
 
