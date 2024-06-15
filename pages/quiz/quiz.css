@@ -7,16 +7,15 @@
 }
 
 :root {
-
     --bg-color: #f4f6fa;
     --bg-span: #f4f6fa;
     --color-span: #626c7f;
     --purple: #a729f5;
-    --purple-hover: rgb(167, 41, 245,0.7);
+    --purple-hover: rgba(167, 41, 245, 0.7);
     --primary-text-color: #313e51;
     --secondary-text-color: #626c7f;
-    --button-bg: #fff;
-    --shadow: 0px 16px 40px 0px rgba(143,160,193,0.14);
+    --buttom-bg: #fff;
+    --shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
     --bg-html: #fff1e9;
     --bg-css: #e0fdef;
     --bg-javascript: #ebf0ff;
@@ -28,19 +27,16 @@
     --bg-desktop: url(../../assets/images/pattern-background-desktop-light.svg);
 }
 
-body.escuro{
+body.escuro {
     --bg-color: #313e51;
     --color-span: #313e51;
     --bg-mobile: url(../../assets/images/pattern-background-mobile-dark.svg);
     --bg-desktop: url(../../assets/images/pattern-background-desktop-dark.svg);
     --primary-text-color: #fff;
     --secondary-text-color: #abc1e1;
-    --button-bg: #3b4666;
-    --shadow: 0px 16px 40px 0px rgba(49,62,81,0.14);
-    
-    
+    --buttom-bg: #3b4d66;
+    --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
 }
-
 
 body {
     height: 100svh;
@@ -62,11 +58,25 @@ header {
 }
 
 .assunto_icone {
-    background: var(--bg-acessibilidade);
     width: 40px;
     height: 40px;
     padding: 5px;
     border-radius: 5px;
+}
+
+.assunto_icone.html {
+    background: var(--bg-html);
+}
+
+.assunto_icone.css {
+    background: var(--bg-css);
+}
+
+.assunto_icone.javascript {
+    background: var(--bg-javascript);
+}
+.assunto_icone.acessibilidade {
+    background: var(--bg-acessibilidade);
 }
 
 .assunto_icone img {
@@ -80,7 +90,6 @@ header {
 }
 
 .tema {
-   
     padding: 8px 0;
     display: flex;
     align-items: center;
@@ -94,10 +103,12 @@ header {
 .tema button {
     height: 20px;
     width: 32px;
-    background: var(--purple);
+    background-color: var(--purple);
     border: 0;
     border-radius: 999px;
     padding: 4px;
+    display: flex;
+    cursor: pointer;
 }
 
 .tema button div {
@@ -122,7 +133,6 @@ main {
     margin-bottom: 12px;
 }
 
-
 .pergunta h2 {
     font-size: 20px;
     font-weight: 500;
@@ -132,7 +142,7 @@ main {
 }
 
 .barra_progresso {
-    background: var(--button-bg);
+    background-color: var(--buttom-bg);
     height: 16px;
     padding: 4px;
     border-radius: 999px;
@@ -140,7 +150,6 @@ main {
 
 .barra_progresso div {
     height: 100%;
-    width: 60%;
     background: var(--purple);
     border-radius: 999px;
 }
@@ -150,11 +159,11 @@ main {
     flex-direction: column;
     gap: 12px;
     margin-bottom: 12px;
-} 
+}
 
 .alternativas label {
     display: block;
-    background: var(--button-bg);
+    background: var(--buttom-bg);
     padding: 12px;
     font-size: 18px;
     font-weight: 500;
@@ -241,13 +250,12 @@ main {
 }
 
 @media(min-width: 1100px) {
-
     body {
         background: var(--bg-desktop) var(--bg-color);
         background-size: cover;
         background-repeat: no-repeat;
     }
-
+    
     header {
         margin-block: 81px;
         max-width: 1160px;
@@ -261,7 +269,7 @@ main {
     }
 
     .assunto h1 {
-        font-size: 28;
+        font-size: 28px;
     }
 
     .tema {
@@ -298,7 +306,6 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
     }
 
     .pergunta p {
@@ -336,8 +343,4 @@ main {
     .alternativas button {
         font-size: 22px;
     }
-
 }
-
-
-
